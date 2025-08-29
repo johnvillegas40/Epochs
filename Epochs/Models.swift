@@ -17,12 +17,23 @@ public enum Rarity: String, Codable {
 }
 
 public struct Cost: Codable, Hashable {
-    public var knowledge: Int = 0
-    public var materials: Int = 0
-    public var influence: Int = 0
+    public var knowledge: Int
+    public var materials: Int
+    public var influence: Int
+
     public init(knowledge: Int = 0, materials: Int = 0, influence: Int = 0) {
-        self.knowledge = knowledge; self.materials = materials; self.influence = influence
+        self.knowledge = knowledge
+        self.materials = materials
+        self.influence = influence
     }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        knowledge = try container.decodeIfPresent(Int.self, forKey: .knowledge) ?? 0
+        materials = try container.decodeIfPresent(Int.self, forKey: .materials) ?? 0
+        influence = try container.decodeIfPresent(Int.self, forKey: .influence) ?? 0
+    }
+
     public func asArray() -> [(Resource, Int)] {
         var arr: [(Resource, Int)] = []
         if knowledge > 0 { arr.append((.knowledge, knowledge)) }

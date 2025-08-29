@@ -1,65 +1,46 @@
 import SwiftUI
 
 public struct PlayView: View {
-    let deck: PlayerDeck
-    let allCards: [Card]
-    @State private var hand: [Card] = []
-    @State private var battlefield: [Card] = []
-    @State private var library: [Card] = []
-    @State private var ip: Int = 20
-    
+    @StateObject private var engine: RulesEngine
+
     public init(deck: PlayerDeck, allCards: [Card]) {
-        self.deck = deck
-        self.allCards = allCards
+        _engine = StateObject(wrappedValue: RulesEngine(deck: deck, allCards: allCards))
     }
-    
+
     public var body: some View {
         VStack(spacing: 8) {
             HStack {
-                Text("Influence Points: \(ip)").font(.headline)
+                Text("Influence Points: \(engine.state.ip)").font(.headline)
                 Spacer()
-                Button("Draw") { draw(1) }
+                Button("Draw") { engine.draw(1) }
                 Button("Play First From Hand") {
-                    if let first = hand.first {
-                        battlefield.append(first); hand.removeFirst()
+                    if let first = engine.state.hand.first {
+                        engine.play(card: first)
                     }
                 }
-                Button("Gain +1 IP") { ip += 1 }
-                Button("Lose -1 IP") { ip = max(0, ip - 1) }
+                Button("Attack With First") {
+                    if let first = engine.state.battlefield.first {
+                        engine.attack(attacker: first, defender: nil)
+                    }
+                }
+                Button("Next Phase") { engine.nextPhase() }
             }.padding(.horizontal)
-            
+
             Text("Battlefield").font(.title3)
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {
-                    ForEach(battlefield, id: \.self) { c in CardView(card: c).frame(width: 220) }
+                    ForEach(engine.state.battlefield, id: \.self) { c in CardView(card: c).frame(width: 220) }
                 }.padding(.horizontal)
             }
-            
+
             Divider()
             Text("Hand").font(.title3)
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {
-                    ForEach(hand, id: \.self) { c in CardView(card: c).frame(width: 220) }
+                    ForEach(engine.state.hand, id: \.self) { c in CardView(card: c).frame(width: 220) }
                 }.padding(.horizontal)
-            }
-        }
-        .onAppear { reset() }
-    }
-    
-    private func reset() {
-        var deckCards: [Card] = deck.cardIDs.compactMap { id in allCards.first(where: { $0.id == id }) }
-        deckCards.shuffle()
-        library = deckCards
-        hand = []
-        battlefield = []
-        ip = 20
-        draw(7)
-    }
-    private func draw(_ n: Int) {
-        for _ in 0..<n {
-            if !library.isEmpty {
-                hand.append(library.removeFirst())
             }
         }
     }
 }
+

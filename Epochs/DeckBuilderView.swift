@@ -3,11 +3,15 @@ import SwiftUI
 public struct DeckBuilderView: View {
     @ObservedObject var collection: CollectionService
     @State private var selectedDeckIndex: Int = 0
+
+    private let minimumDeckSize = 60
+    private let maxCopiesPerCard = 4
     
     public init(collection: CollectionService) { self.collection = collection }
     
     public var body: some View {
-        VStack {
+        let deck = collection.decks[selectedDeckIndex]
+        return VStack {
             HStack {
                 Picker("Deck", selection: $selectedDeckIndex) {
                     ForEach(collection.decks.indices, id: \.self) { i in
@@ -31,7 +35,10 @@ public struct DeckBuilderView: View {
                             ForEach(collection.allCards, id: \.self) { c in
                                 CardView(card: c)
                                     .onTapGesture {
-                                        collection.decks[selectedDeckIndex].cardIDs.append(c.id)
+                                        let count = collection.decks[selectedDeckIndex].cardIDs.filter { $0 == c.id }.count
+                                        if count < maxCopiesPerCard {
+                                            collection.decks[selectedDeckIndex].cardIDs.append(c.id)
+                                        }
                                     }
                             }
                         }.padding(.vertical, 8)
@@ -39,10 +46,20 @@ public struct DeckBuilderView: View {
                 }.frame(maxWidth: .infinity)
                 
                 VStack(alignment: .leading) {
-                    Text("Deck: \(collection.decks[selectedDeckIndex].name)")
-                        .font(.headline)
+                    HStack {
+                        Text("Deck: \(deck.name)")
+                            .font(.headline)
+                        Spacer()
+                        Text(deck.cardIDs.count >= minimumDeckSize ? "Deck valid" : "Deck invalid")
+                            .foregroundColor(deck.cardIDs.count >= minimumDeckSize ? .green : .red)
+                    }
+                    if deck.cardIDs.count < minimumDeckSize {
+                        Text("Deck must contain at least \(minimumDeckSize) cards")
+                            .foregroundColor(.red)
+                            .font(.caption)
+                    }
                     ScrollView {
-                        let deckCards = collection.decks[selectedDeckIndex].cardIDs.compactMap { id in
+                        let deckCards = deck.cardIDs.compactMap { id in
                             collection.allCards.first(where: { $0.id == id })
                         }
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 180))], spacing: 8) {

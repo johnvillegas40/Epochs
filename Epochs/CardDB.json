@@ -1,0 +1,129 @@
+[
+  {
+    "id": "FND-001",
+    "number": 1,
+    "name": "Apprentice Scholar",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Scholar"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "When played, draw 1 card.",
+    "flavorText": "Every question is a doorway.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-002",
+    "number": 2,
+    "name": "Tinkerer's Assistant",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Scholar"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": {
+      "attack": 0,
+      "defense": 3
+    },
+    "rulesText": "Can block two Citizens each combat.",
+    "flavorText": "The details make the invention.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-003",
+    "number": 3,
+    "name": "Knowledge Seeker",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Scholar"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "When this Citizen enters, scry 1 (look at the top card of your deck, you may put it on the bottom).",
+    "flavorText": "One answer leads to ten new questions.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-004",
+    "number": 4,
+    "name": "Inventive Engineer",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Engineer"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Next Invention you play this turn costs 1 less.",
+    "flavorText": "Blueprints are the dreams of tomorrow, written today.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-005",
+    "number": 5,
+    "name": "Visionary Thinker",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Philosopher"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "At the start of your turn, you may reorder the top card of your deck.",
+    "flavorText": "The mind is the greatest tool of all.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-051",
+    "number": 51,
+    "name": "Trailblazer",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 1
+    },
+    "rulesText": "Must attack each turn if able. If unblocked, deal +1 IP.",
+    "flavorText": "The first path is never the easiest, but always the most remembered.",
+    "setName": "Foundations"
+  }
+]

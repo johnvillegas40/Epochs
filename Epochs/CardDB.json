@@ -6,16 +6,13 @@
     "faction": "Inventors",
     "type": {
       "kind": "citizen",
-      "supertype": "Citizen \u2014 Scholar"
+      "supertype": "Citizen \u2014 Inventor"
     },
     "rarity": "common",
     "cost": {
       "knowledge": 1
     },
-    "stats": {
-      "attack": 1,
-      "defense": 2
-    },
+    "stats": null,
     "rulesText": "When played, draw 1 card.",
     "flavorText": "Every question is a doorway.",
     "setName": "Foundations"
@@ -23,11 +20,11 @@
   {
     "id": "FND-002",
     "number": 2,
-    "name": "Tinkerer's Assistant",
+    "name": "Tinkerer\u2019s Assistant",
     "faction": "Inventors",
     "type": {
       "kind": "citizen",
-      "supertype": "Citizen \u2014 Scholar"
+      "supertype": "Citizen \u2014 Inventor"
     },
     "rarity": "common",
     "cost": {
@@ -44,11 +41,33 @@
   {
     "id": "FND-003",
     "number": 3,
-    "name": "Knowledge Seeker",
+    "name": "Inventive Engineer",
     "faction": "Inventors",
     "type": {
       "kind": "citizen",
-      "supertype": "Citizen \u2014 Scholar"
+      "supertype": "Citizen \u2014 Inventor"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2,
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "The next Invention you play this turn costs 1 less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-004",
+    "number": 4,
+    "name": "Visionary Thinker",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Inventor"
     },
     "rarity": "common",
     "cost": {
@@ -58,51 +77,899 @@
       "attack": 1,
       "defense": 3
     },
-    "rulesText": "When this Citizen enters, scry 1 (look at the top card of your deck, you may put it on the bottom).",
-    "flavorText": "One answer leads to ten new questions.",
+    "rulesText": "At the start of your turn, you may look at the top card of your deck and put it on the bottom.",
+    "flavorText": null,
     "setName": "Foundations"
   },
   {
-    "id": "FND-004",
-    "number": 4,
-    "name": "Inventive Engineer",
+    "id": "FND-005",
+    "number": 5,
+    "name": "Clockwork Automaton",
     "faction": "Inventors",
     "type": {
-      "kind": "citizen",
-      "supertype": "Citizen \u2014 Engineer"
+      "kind": "invention",
+      "supertype": "Invention \u2014 Unit"
     },
-    "rarity": "uncommon",
+    "rarity": "common",
     "cost": {
-      "knowledge": 2,
+      "knowledge": 3,
       "materials": 1
     },
     "stats": {
       "attack": 2,
       "defense": 2
     },
-    "rulesText": "Next Invention you play this turn costs 1 less.",
-    "flavorText": "Blueprints are the dreams of tomorrow, written today.",
+    "rulesText": "Cannot be blocked by Citizens with 2 Attack or less.",
+    "flavorText": null,
     "setName": "Foundations"
   },
   {
-    "id": "FND-005",
-    "number": 5,
-    "name": "Visionary Thinker",
+    "id": "FND-006",
+    "number": 6,
+    "name": "Strategic Pause",
+    "faction": "Inventors",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": null,
+    "rulesText": "Prevent all damage from one Citizen this turn. Draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-007",
+    "number": 7,
+    "name": "Eureka!",
+    "faction": "Inventors",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Search your deck for an Invention, reveal it, put it into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-008",
+    "number": 8,
+    "name": "Scientific Journal",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": null,
+    "rulesText": "Immediate. Draw 2 cards.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-009",
+    "number": 9,
+    "name": "Neutral Scholar Variant",
     "faction": "Inventors",
     "type": {
       "kind": "citizen",
-      "supertype": "Citizen \u2014 Philosopher"
+      "supertype": "Citizen \u2014 Inventor"
     },
-    "rarity": "uncommon",
+    "rarity": "common",
     "cost": {
       "knowledge": 2
     },
     "stats": {
       "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "When played, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-010",
+    "number": 10,
+    "name": "Basic Invention",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Gain +1 Knowledge each turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-011",
+    "number": 11,
+    "name": "Technician Guild",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Inventor"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 3,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 3,
       "defense": 3
     },
-    "rulesText": "At the start of your turn, you may reorder the top card of your deck.",
-    "flavorText": "The mind is the greatest tool of all.",
+    "rulesText": "Whenever you play an Invention, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-012",
+    "number": 12,
+    "name": "Printing Press",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, draw 1 extra card.",
+    "flavorText": "Knowledge spreads faster than fire.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-013",
+    "number": 13,
+    "name": "Mechanical Loom",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Generate +1 Materials each turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-014",
+    "number": 14,
+    "name": "Innovation Hub",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you gain Influence, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-015",
+    "number": 15,
+    "name": "Blueprint Error",
+    "faction": "Inventors",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Cancel an Invention or Wonder.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-016",
+    "number": 16,
+    "name": "Insightful Research",
+    "faction": "Inventors",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Look at the top 3 cards of your deck. Put one into your hand, one on top, one on bottom.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-017",
+    "number": 17,
+    "name": "Modular Automaton",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Unit"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 3
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Choose one when played: +2 Attack, or +2 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-018",
+    "number": 18,
+    "name": "Steamworks",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 3,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. All your Citizens cost 1 less to play.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-019",
+    "number": 19,
+    "name": "Refined Engine",
+    "faction": "Inventors",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you play a Citizen, gain +1 Knowledge.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-020",
+    "number": 20,
+    "name": "Knowledge Vault",
+    "faction": "Inventors",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 3
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, if you have no cards in hand, draw 3 cards.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-021",
+    "number": 21,
+    "name": "Great Inventor",
+    "faction": "Inventors",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Inventor"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 4,
+      "materials": 2
+    },
+    "stats": {
+      "attack": 4,
+      "defense": 4
+    },
+    "rulesText": "Your first Invention each turn costs 1 less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-022",
+    "number": 22,
+    "name": "Scientific Congress",
+    "faction": "Inventors",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 3,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the end of each turn, if you drew 3 or more cards, gain +2 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-023",
+    "number": 23,
+    "name": "Grand Workshop",
+    "faction": "Inventors",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 4,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you play get +1/+1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-024",
+    "number": 24,
+    "name": "Academy of Gears",
+    "faction": "Inventors",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 3,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Once per turn, you may duplicate the effect of an Event you play.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-025",
+    "number": 25,
+    "name": "Grand Observatory",
+    "faction": "Inventors",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "mythic",
+    "cost": {
+      "knowledge": 5,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, draw 2 extra cards. Whenever you play an Invention, gain +1 Influence.",
+    "flavorText": "Ideas spread like starlight \u2014 infinite, inevitable.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-026",
+    "number": 26,
+    "name": "Stone Mason",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "On play, add +1 Materials this turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-027",
+    "number": 27,
+    "name": "Farmer Collective",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "On play, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-028",
+    "number": 28,
+    "name": "Builder\u2019s Laborer",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 1
+    },
+    "rulesText": "Basic attacker.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-029",
+    "number": 29,
+    "name": "Labor Camp",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, gain +1 Materials.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-030",
+    "number": 30,
+    "name": "Quarry Workers",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "Ongoing: Territories you control produce +1 Materials when tapped.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-031",
+    "number": 31,
+    "name": "Defensive Wall",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you control gain +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-032",
+    "number": 32,
+    "name": "Reinforcements",
+    "faction": "Builders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Create a 1/2 Laborer Citizen token.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-033",
+    "number": 33,
+    "name": "Construction Boom",
+    "faction": "Builders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "You may play 1 additional Territory this turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-034",
+    "number": 34,
+    "name": "Resource Gatherer",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-035",
+    "number": 35,
+    "name": "Basic Wonder",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Gain +1 Influence each turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-036",
+    "number": 36,
+    "name": "Master Builder",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 3
+    },
+    "rulesText": "Structures cost 1 less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-037",
+    "number": 37,
+    "name": "Great Architect",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 3
+    },
+    "rulesText": "When you play a Wonder, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-038",
+    "number": 38,
+    "name": "Guild Overseer",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 2
+    },
+    "rulesText": "At the start of each turn, generate +1 Materials.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-039",
+    "number": 39,
+    "name": "Aqueducts",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens gain +1 Attack when attacking.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-040",
+    "number": 40,
+    "name": "Stone Walls",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens gain +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-041",
+    "number": 41,
+    "name": "Workshop Forge",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. When you play a Citizen, gain +1 Materials.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-042",
+    "number": 42,
+    "name": "Mason\u2019s Guild",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you play a Citizen, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-043",
+    "number": 43,
+    "name": "Trade Convoy",
+    "faction": "Builders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3
+    },
+    "stats": null,
+    "rulesText": "Gain +3 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-044",
+    "number": 44,
+    "name": "Supply Depot",
+    "faction": "Builders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Your maximum hand size is increased by 2.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-045",
+    "number": 45,
+    "name": "Rural Expansion",
+    "faction": "Builders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3
+    },
+    "stats": null,
+    "rulesText": "Search your deck for 2 Territories and put them into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-046",
+    "number": 46,
+    "name": "Colossus Foreman",
+    "faction": "Builders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Builder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 4,
+      "influence": 2
+    },
+    "stats": {
+      "attack": 4,
+      "defense": 5
+    },
+    "rulesText": "All your Citizens gain +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-047",
+    "number": 47,
+    "name": "Great Pyramid",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 6
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, gain +1 Materials and +1 Influence. Opponent Citizens cost +1 more.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-048",
+    "number": 48,
+    "name": "Colosseum",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 4,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Whenever your Citizens attack, the first one each turn gives you +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-049",
+    "number": 49,
+    "name": "Monument of Ages",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 5
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of each turn, gain +2 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-050",
+    "number": 50,
+    "name": "Great Pyramid",
+    "faction": "Builders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "mythic",
+    "cost": {
+      "materials": 6
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, gain +1 Materials and +1 Influence. Opponents\u2019 Citizens cost +1 more.",
+    "flavorText": "It will stand for millennia, and so will our civilization.",
     "setName": "Foundations"
   },
   {
@@ -122,8 +989,2200 @@
       "attack": 2,
       "defense": 1
     },
-    "rulesText": "Must attack each turn if able. If unblocked, deal +1 IP.",
-    "flavorText": "The first path is never the easiest, but always the most remembered.",
+    "rulesText": "Must attack each turn if able. If unblocked, deals +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-052",
+    "number": 52,
+    "name": "Adventuring Party",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 1
+    },
+    "rulesText": "If unblocked, deals +2 extra Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-053",
+    "number": 53,
+    "name": "Mapmaker",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "On play, look at the top 2 cards of your deck, put one back and one on bottom.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-054",
+    "number": 54,
+    "name": "Smuggler Crew",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Cannot be blocked by Citizens with Defense 3 or greater.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-055",
+    "number": 55,
+    "name": "Pillage",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Deal 3 Influence damage to opponent. If they have more IP than you, deal 5 instead.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-056",
+    "number": 56,
+    "name": "Common Raider",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, opponent discards 1 card at random.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-057",
+    "number": 57,
+    "name": "Scouting Expedition",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Search your deck for a Territory card, reveal it, put it into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-058",
+    "number": 58,
+    "name": "Quick Skirmish",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Target Citizen gets +2 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-059",
+    "number": 59,
+    "name": "Frontier Scout",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "Cannot be blocked by Citizens with Attack greater than 3.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-060",
+    "number": 60,
+    "name": "Basic Expedition",
+    "faction": "Explorers",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of each turn, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-061",
+    "number": 61,
+    "name": "Sea Voyager",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Cannot be blocked by Citizens with Defense 2 or less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-062",
+    "number": 62,
+    "name": "Conquistador Captain",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 4,
+      "defense": 2
+    },
+    "rulesText": "When attacking, another Citizen gets +1 Attack.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-063",
+    "number": 63,
+    "name": "Compass",
+    "faction": "Explorers",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you deal Influence damage, gain +1 additional Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-064",
+    "number": 64,
+    "name": "Raiding Fleet",
+    "faction": "Explorers",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever your Citizens deal Influence damage, deal +1 more.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-065",
+    "number": 65,
+    "name": "Veteran Pathfinder",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 2
+    },
+    "rulesText": "When this attacks and isn\u2019t blocked, opponent discards 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-066",
+    "number": 66,
+    "name": "Treasure Cache",
+    "faction": "Explorers",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "When played, draw 2 cards.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-067",
+    "number": 67,
+    "name": "Storm at Sea",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Destroy target Citizen with Defense 2 or less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-068",
+    "number": 68,
+    "name": "Charge Ahead!",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Target Citizen gains First Strike until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-069",
+    "number": 69,
+    "name": "Ambush Tactics",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Target Citizen gets +2 Attack and First Strike until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-070",
+    "number": 70,
+    "name": "Explorer\u2019s Camp",
+    "faction": "Explorers",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, draw 1 card if you dealt Influence damage last turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-071",
+    "number": 71,
+    "name": "Great Voyage",
+    "faction": "Explorers",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 2,
+      "materials": 4
+    },
+    "stats": null,
+    "rulesText": "Whenever your Citizens deal Influence damage, draw 1 card. Once per turn, deal +1 Influence if an opponent controls more Territories than you.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-072",
+    "number": 72,
+    "name": "Harbor Colony",
+    "faction": "Explorers",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 3,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "At the start of each turn, create a 1/1 Explorer Citizen token.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-073",
+    "number": 73,
+    "name": "Legendary Navigator",
+    "faction": "Explorers",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Explorer"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 1,
+      "materials": 4
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 3
+    },
+    "rulesText": "On play, search your deck for a Territory and put it into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-074",
+    "number": 74,
+    "name": "Crossroads",
+    "faction": "Explorers",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "rare",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Each player draws 2 cards. You gain +2 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-075",
+    "number": 75,
+    "name": "Great Voyage",
+    "faction": "Explorers",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "mythic",
+    "cost": {
+      "knowledge": 2,
+      "materials": 4
+    },
+    "stats": null,
+    "rulesText": "Whenever your Citizens deal Influence damage, draw 1 card. Once per turn, you may deal 1 extra Influence damage if an opponent controls more Territories than you.",
+    "flavorText": "The horizon is not a boundary \u2014 it is an invitation.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-076",
+    "number": 76,
+    "name": "Street Performer",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-077",
+    "number": 77,
+    "name": "Festival Dancers",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "On play, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-078",
+    "number": 78,
+    "name": "Cultural Envoy",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Other Citizens gain +1 Attack when attacking.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-079",
+    "number": 79,
+    "name": "Traveling Entertainer",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, draw 1, then discard 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-080",
+    "number": 80,
+    "name": "United Front",
+    "faction": "Artists",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Create a 1/1 Citizen token for each Citizen you control.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-081",
+    "number": 81,
+    "name": "Citizen Painter",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "When this attacks, another Citizen gets +1 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-082",
+    "number": 82,
+    "name": "Rally Parade",
+    "faction": "Artists",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Your Citizens gain +1 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-083",
+    "number": 83,
+    "name": "Inspiring Chorus",
+    "faction": "Artists",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Choose a Citizen. It gains +2 Defense until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-084",
+    "number": 84,
+    "name": "Local Artisan",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, gain +1 Knowledge.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-085",
+    "number": 85,
+    "name": "Basic Cultural Work",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Gain +1 Influence each turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-086",
+    "number": 86,
+    "name": "Renowned Artist",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Whenever you gain Influence, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-087",
+    "number": 87,
+    "name": "Orchestra Leader",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 4
+    },
+    "rulesText": "At the start of combat, choose another Citizen. It gains +2 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-088",
+    "number": 88,
+    "name": "Art Guild",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Your Citizens cost 1 less to play.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-089",
+    "number": 89,
+    "name": "Grand Festival",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At end of each turn, gain +1 Influence per Citizen you control.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-090",
+    "number": 90,
+    "name": "Cultural Exchange",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. When an opponent plays a Citizen, you may draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-091",
+    "number": 91,
+    "name": "Hall of Inspiration",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 4
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, target Citizen gets +2 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-092",
+    "number": 92,
+    "name": "Sculpture Garden",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you control gain +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-093",
+    "number": 93,
+    "name": "Public Stage",
+    "faction": "Artists",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you play gain +1 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-094",
+    "number": 94,
+    "name": "Folk Traditions",
+    "faction": "Artists",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Target Citizen gains +1 Attack and +1 Defense until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-095",
+    "number": 95,
+    "name": "Community Hall",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of each turn, gain +1 IP if you control 3+ Citizens.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-096",
+    "number": 96,
+    "name": "Grand Maestro",
+    "faction": "Artists",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Artist"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 2,
+      "influence": 3
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 4
+    },
+    "rulesText": "All your Citizens get +1 Attack and +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-097",
+    "number": 97,
+    "name": "Masterpiece Gallery",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "influence": 4
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you draw a card, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-098",
+    "number": 98,
+    "name": "Conservatory of Arts",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 1,
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Whenever you gain Influence, create a 1/1 Citizen token.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-099",
+    "number": 99,
+    "name": "Harmony Monument",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "influence": 5
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you control cannot be reduced below 1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-100",
+    "number": 100,
+    "name": "Museum of Civilization",
+    "faction": "Artists",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "mythic",
+    "cost": {
+      "knowledge": 1,
+      "influence": 5
+    },
+    "stats": null,
+    "rulesText": "Whenever you gain Influence, place that many tokens here. If this has 15 or more, you win the game.",
+    "flavorText": "When the legacy of culture endures, the people are immortal.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-101",
+    "number": 101,
+    "name": "Ambitious Diplomat",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "At the end of your turn, you may pay 1 IP to draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-102",
+    "number": 102,
+    "name": "Policy Advisor",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "On play, search your deck for a Territory and put it into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-103",
+    "number": 103,
+    "name": "Council of Elders",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "Each time you play an Event, gain +1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-104",
+    "number": 104,
+    "name": "Charismatic Ruler",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "On play, gain control of an enemy Citizen with Attack \u2264 2 until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-105",
+    "number": 105,
+    "name": "Political Strategist",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Once per turn, you may redirect an attack from yourself to another Citizen you control.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-106",
+    "number": 106,
+    "name": "Standing Guards",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 3
+    },
+    "rulesText": "Basic defender.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-107",
+    "number": 107,
+    "name": "Diplomatic Message",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Target opponent reveals their hand. Choose one card. That player discards it.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-108",
+    "number": 108,
+    "name": "Basic Edict",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Opponent loses 2 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-109",
+    "number": 109,
+    "name": "Vote of No Confidence",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1,
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "Choose one Citizen. Until end of turn, it cannot attack, defend, or use abilities. Draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-110",
+    "number": 110,
+    "name": "Forced Resignation",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Remove one opposing Citizen from play. That Citizen\u2019s controller gains +1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-111",
+    "number": 111,
+    "name": "Strategic Alliance",
+    "faction": "Leaders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. When you play a Citizen, gain +1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-112",
+    "number": 112,
+    "name": "Propaganda Network",
+    "faction": "Leaders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, each opponent loses 1 IP, you gain 1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-113",
+    "number": 113,
+    "name": "Tax System",
+    "faction": "Leaders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Opponents must pay +1 Influence to play Citizens.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-114",
+    "number": 114,
+    "name": "Court of Law",
+    "faction": "Leaders",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Once per turn, you may pay 1 IP to reduce one opposing Citizen\u2019s Defense to 0 until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-115",
+    "number": 115,
+    "name": "Power Grab",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Opponent loses 3 IP, you gain 3 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-116",
+    "number": 116,
+    "name": "Political Maneuver",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Choose one: draw 2 cards; or opponent discards 2 cards.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-117",
+    "number": 117,
+    "name": "Secret Treaty",
+    "faction": "Leaders",
+    "type": {
+      "kind": "event",
+      "supertype": "Event"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "Search your deck for any Wonder and put it into your hand.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-118",
+    "number": 118,
+    "name": "Council Chambers",
+    "faction": "Leaders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, draw 1 card, then discard 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-119",
+    "number": 119,
+    "name": "Cunning Negotiator",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "On play, target opponent discards 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-120",
+    "number": 120,
+    "name": "Influence Broker",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 3
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 3
+    },
+    "rulesText": "At the end of each turn, gain +1 IP if an opponent lost IP this turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-121",
+    "number": 121,
+    "name": "Great Statesman",
+    "faction": "Leaders",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Leader"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 2,
+      "influence": 3
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 4
+    },
+    "rulesText": "At the start of your turn, choose: gain +2 IP or target opponent loses 2 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-122",
+    "number": 122,
+    "name": "Legacy of Law",
+    "faction": "Leaders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 1,
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the end of your turn, if an opponent played more cards than you this turn, they lose 2 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-123",
+    "number": 123,
+    "name": "Imperial Seal",
+    "faction": "Leaders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "influence": 4
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, you may look at an opponent\u2019s hand and choose 1 card for them to discard.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-124",
+    "number": 124,
+    "name": "Senate Chamber",
+    "faction": "Leaders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 2,
+      "influence": 4
+    },
+    "stats": null,
+    "rulesText": "At the end of your turn, target opponent discards 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-125",
+    "number": 125,
+    "name": "Senate Chamber",
+    "faction": "Leaders",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder"
+    },
+    "rarity": "mythic",
+    "cost": {
+      "knowledge": 2,
+      "influence": 4
+    },
+    "stats": null,
+    "rulesText": "At the end of your turn, target opponent discards 1 card. Once per turn, you may pay 2 Influence: Opponent loses 2 IP.",
+    "flavorText": "Every empire is ruled not by armies, but by votes.",
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-126",
+    "number": 126,
+    "name": "Basic Knowledge Source",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates 1 Knowledge when tapped.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-127",
+    "number": 127,
+    "name": "Basic Materials Source",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates 1 Materials when tapped.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-128",
+    "number": 128,
+    "name": "Basic Influence Source",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates 1 Influence when tapped.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-129",
+    "number": 129,
+    "name": "Trading Post",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "uncommon",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates any resource. When tapped, you lose 1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-130",
+    "number": 130,
+    "name": "Merchant Outpost",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "uncommon",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates any 2 of different resources. Can only be used once every 2 turns.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-131",
+    "number": 131,
+    "name": "Capital City",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "territory",
+      "supertype": "Territory"
+    },
+    "rarity": "rare",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Generates any resource. If you control 5 or more Territories, gain +1 IP each turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-132",
+    "number": 132,
+    "name": "Commoner",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "Basic unit.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-133",
+    "number": 133,
+    "name": "Laborer",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 1
+    },
+    "rulesText": "Simple attacker.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-134",
+    "number": 134,
+    "name": "Guard",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Basic defender.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-135",
+    "number": 135,
+    "name": "Merchant",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 2
+    },
+    "rulesText": "On play, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-136",
+    "number": 136,
+    "name": "Scholar\u2019s Apprentice",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "On play, draw 1 card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-137",
+    "number": 137,
+    "name": "Traveling Entertainer",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 1
+    },
+    "rulesText": "On play, draw 1, then discard 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-138",
+    "number": 138,
+    "name": "Citizen Militia",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 3
+    },
+    "rulesText": "Basic soldier.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-139",
+    "number": 139,
+    "name": "Veteran Soldier",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2,
+      "influence": 1
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 2
+    },
+    "rulesText": "Aggressive fighter.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-140",
+    "number": 140,
+    "name": "Wandering Sage",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "Once per turn, you may look at the top card of your deck and rearrange it.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-141",
+    "number": 141,
+    "name": "Envoy of the People",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 2
+    },
+    "stats": {
+      "attack": 1,
+      "defense": 3
+    },
+    "rulesText": "On play, each player gains +1 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-142",
+    "number": 142,
+    "name": "Caravan Guard",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3
+    },
+    "stats": {
+      "attack": 3,
+      "defense": 3
+    },
+    "rulesText": "When blocking, it gains +1 Defense.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-143",
+    "number": 143,
+    "name": "Skilled Artisan",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 2,
+      "materials": 1
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 2
+    },
+    "rulesText": "When played, you may reduce the cost of your next Invention by 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-144",
+    "number": 144,
+    "name": "Wandering Hero",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "rare",
+    "cost": {},
+    "stats": {
+      "attack": 3,
+      "defense": 3
+    },
+    "rulesText": "Other Citizens you control get +1 Attack when attacking.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-145",
+    "number": 145,
+    "name": "Legendary Leader\u2019s Guard",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "citizen",
+      "supertype": "Citizen \u2014 Neutral"
+    },
+    "rarity": "rare",
+    "cost": {
+      "influence": 3
+    },
+    "stats": {
+      "attack": 2,
+      "defense": 4
+    },
+    "rulesText": "While in play, reduce all damage dealt to you by 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-146",
+    "number": 146,
+    "name": "Marketplace",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Once per turn, you may trade 1 resource type for another.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-147",
+    "number": 147,
+    "name": "Barracks",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. All your Citizens get +1 Attack when blocking.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-148",
+    "number": 148,
+    "name": "Archives",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Once per turn, you may draw 1 card, then discard 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-149",
+    "number": 149,
+    "name": "Public Well",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of each turn, gain +1 Influence.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-150",
+    "number": 150,
+    "name": "Town Forge",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you play cost 1 less.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-151",
+    "number": 151,
+    "name": "Small Shrine",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "invention",
+      "supertype": "Invention \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. At the start of your turn, gain +1 Knowledge.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-152",
+    "number": 152,
+    "name": "Statue of Unity",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {},
+    "stats": null,
+    "rulesText": "At the start of your turn, gain +1 IP if you control Citizens from 2+ factions.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-153",
+    "number": 153,
+    "name": "Cultural Square",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "At the end of each turn, gain +1 IP if you played an Event that turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-154",
+    "number": 154,
+    "name": "Neutral Amphitheater",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 3,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Ongoing. Citizens you control gain +1 Attack.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-155",
+    "number": 155,
+    "name": "Great Library",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "wonder",
+      "supertype": "Wonder \u2014 Neutral"
+    },
+    "rarity": "rare",
+    "cost": {
+      "knowledge": 5
+    },
+    "stats": null,
+    "rulesText": "At the start of your turn, draw an additional card.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-156",
+    "number": 156,
+    "name": "Rally the People",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Create a 1/1 Citizen token.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-157",
+    "number": 157,
+    "name": "Defensive Stance",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Prevent 2 damage to target Citizen.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-158",
+    "number": 158,
+    "name": "Resource Surge",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2
+    },
+    "stats": null,
+    "rulesText": "Gain 2 of any resource.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-159",
+    "number": 159,
+    "name": "Seize Opportunity",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {},
+    "stats": null,
+    "rulesText": "Draw 2 cards, then discard 1.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-160",
+    "number": 160,
+    "name": "Minor Skirmish",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Target Citizen gets +1 Attack and +1 Defense until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-161",
+    "number": 161,
+    "name": "Supply Chain",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "common",
+    "cost": {
+      "knowledge": 2,
+      "materials": 1
+    },
+    "stats": null,
+    "rulesText": "Search your deck for 1 Territory and put it into play tapped.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-162",
+    "number": 162,
+    "name": "Coordinated Strike",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "materials": 2
+    },
+    "stats": null,
+    "rulesText": "Two target Citizens each gain +2 Attack until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-163",
+    "number": 163,
+    "name": "Political Uprising",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 2
+    },
+    "stats": null,
+    "rulesText": "All players lose 2 IP. You gain 2 IP.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-164",
+    "number": 164,
+    "name": "Inspired Resolve",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "uncommon",
+    "cost": {
+      "knowledge": 1,
+      "influence": 1
+    },
+    "stats": null,
+    "rulesText": "Choose one Citizen. It gains +3 Defense until end of turn.",
+    "flavorText": null,
+    "setName": "Foundations"
+  },
+  {
+    "id": "FND-165",
+    "number": 165,
+    "name": "Civic Uprising",
+    "faction": "Neutrals",
+    "type": {
+      "kind": "event",
+      "supertype": "Event \u2014 Neutral"
+    },
+    "rarity": "rare",
+    "cost": {
+      "influence": 3
+    },
+    "stats": null,
+    "rulesText": "All your Citizens gain +1 Attack until end of turn. Opponent loses 1 IP for each Citizen you control.",
+    "flavorText": null,
     "setName": "Foundations"
   }
 ]
